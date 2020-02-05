@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gamificacao.Server", "gamificacao\Server\gamificacao.Server.csproj", "{47C48632-2A8F-4C05-9F35-65D825FA3171}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gamificacao.Client", "gamificacao\Client\gamificacao.Client.csproj", "{2F9503F8-B39D-47A6-9406-B34DAD93F353}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gamificacao.Shared", "gamificacao\Shared\gamificacao.Shared.csproj", "{4FA5AB59-445F-4CD2-8232-A90A4A44FE36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47C48632-2A8F-4C05-9F35-65D825FA3171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C48632-2A8F-4C05-9F35-65D825FA3171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C48632-2A8F-4C05-9F35-65D825FA3171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C48632-2A8F-4C05-9F35-65D825FA3171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9503F8-B39D-47A6-9406-B34DAD93F353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9503F8-B39D-47A6-9406-B34DAD93F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9503F8-B39D-47A6-9406-B34DAD93F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9503F8-B39D-47A6-9406-B34DAD93F353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA5AB59-445F-4CD2-8232-A90A4A44FE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA5AB59-445F-4CD2-8232-A90A4A44FE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA5AB59-445F-4CD2-8232-A90A4A44FE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA5AB59-445F-4CD2-8232-A90A4A44FE36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13A23DB1-14B5-4241-8D48-0085F2E6EE99}
+	EndGlobalSection
+EndGlobal

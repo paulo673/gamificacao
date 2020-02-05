@@ -1,0 +1,59 @@
+﻿@page "/historico"
+
+@inject HttpClient Http
+@using gamificacao.Shared
+
+<h3>Histórico</h3>
+@if (historicosDaEdicao == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th rowspan="2" class="text-center">Time</th>
+                <th colspan="2" class="text-center">Seg, 03/02</th>
+                <th colspan="2" class="text-center">Ter, 04/02</th>
+                <th colspan="2" class="text-center">Qua, 05/02</th>
+                <th colspan="2" class="text-center">Qui, 06/02</th>
+                <th colspan="2" class="text-center">Sex, 07/02</th>
+            </tr>
+            <tr>
+                <th>Carta</th>
+                <th>Pontuação</th>
+                <th>Carta</th>
+                <th>Pontuação</th>
+                <th>Carta</th>
+                <th>Pontuação</th>
+                <th>Carta</th>
+                <th>Pontuação</th>
+                <th>Carta</th>
+                <th>Pontuação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var historico in historicosDaEdicao)
+            {
+                <tr>
+                    <td>@historico.Time</td>
+                    @foreach (var item in historico.Historicos)
+                    {
+                        <td>@historico.Carta</td>
+                        <td>@historico.Pontuacao</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private HistoricoDaEdicao[] historicosDaEdicao;
+
+    protected override async Task OnInitializedAsync()
+    {
+        historicosDaEdicao = await Http.GetJsonAsync<HistoricoDaEdicao[]>("edicao/historico");
+    }
+}

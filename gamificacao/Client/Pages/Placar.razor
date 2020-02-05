@@ -1,0 +1,38 @@
+﻿@page "/placar"
+@inject HttpClient Http
+@using gamificacao.Shared
+
+<h3>Placar</h3>
+@if (placarGeral == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Pontuação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var placar in placarGeral)
+            {
+                <tr>
+                    <td>@placar.Time</td>
+                    <td>@placar.Pontuacao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private PlacarDaEdicao[] placarGeral;
+        
+    protected override async Task OnInitializedAsync()
+    {
+        placarGeral = await Http.GetJsonAsync<PlacarDaEdicao[]>("edicao/placar");
+    }
+}
